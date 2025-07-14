@@ -1,0 +1,102 @@
+{
+    "1 IG": [
+        {
+            "id": "user1_1",
+            "pass": "pass11"
+        },
+        {
+            "id": "user1_2",
+            "pass": "pass12"
+        }
+    ],
+    "2 IG": [
+        {
+            "id": "user2_1",
+            "pass": "pass21"
+        },
+        {
+            "id": "user2_2",
+            "pass": "pass22"
+        }
+    ],
+    "3 IG": [
+        {
+            "id": "user3_1",
+            "pass": "pass31"
+        },
+        {
+            "id": "user3_2",
+            "pass": "pass32"
+        }
+    ],
+    "4 IG": [
+        {
+            "id": "user4_1",
+            "pass": "pass41"
+        },
+        {
+            "id": "user4_2",
+            "pass": "pass42"
+        }
+    ],
+    "5 IG": [
+        {
+            "id": "user5_1",
+            "pass": "pass51"
+        },
+        {
+            "id": "user5_2",
+            "pass": "pass52"
+        }
+    ],
+    "6 IG": [
+        {
+            "id": "user6_1",
+            "pass": "pass61"
+        },
+        {
+            "id": "user6_2",
+            "pass": "pass62"
+        }
+    ],
+    "7 IG": [
+        {
+            "id": "user7_1",
+            "pass": "pass71"
+        },
+        {
+            "id": "user7_2",
+            "pass": "pass72"
+        }
+    ],
+    "8 IG": [
+        {
+            "id": "user8_1",
+            "pass": "pass81"
+        },
+        {
+            "id": "user8_2",
+            "pass": "pass82"
+        }
+    ],
+    "9 IG": [
+        {
+            "id": "user9_1",
+            "pass": "pass91"
+        },
+        {
+            "id": "user9_2",
+            "pass": "pass92"
+        }
+    ],
+    "10 IG": [
+        {
+            "id": "user10_1",
+            "pass": "pass101"
+        },
+        {
+            "id": "user10_2",
+            "pass": "pass102"
+        }
+    ]
+}

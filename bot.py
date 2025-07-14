@@ -44,7 +44,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if query.data == 'add_funds':
         context.user_data["awaiting_utr"] = True
-        await query.edit_message_text(f"💰 Send ₹ to UPI: `{UPI_ID}`
+        await query.edit_message_text(f"💰 Send ₹ to UPI: `{UPI_ID}`")
+
 After payment, reply with your UTR/Txn ID.")
     elif query.data == 'indo_ig':
         keyboard = [

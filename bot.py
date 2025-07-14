@@ -80,13 +80,20 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await query.edit_message_text("❌ Sorry, out of stock for this IG pack.")
 
 # Handle UTR message
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if context.user_data.get("awaiting_utr"):
-        utr = update.message.text.strip()
-        save_utr_request(update.effective_user.username or update.effective_user.id, utr)
-        await update.message.reply_text("✅ UTR submitted. Please wait for admin verification.")
-        await context.bot.send_message(
-            chat_id=ADMIN_ID,
-            text=f"📥 New UTR from @{update.effective_user.username or update.effective_user.id}:\n{utr}"
-        )
-        context.user_data["awaiting_utr"] = False
+import asyncio
+
+# Keep all existing code above this
+
+async def main():
+    app = ApplicationBuilder().token("8097664827:AAFMBlfi-jyRsIghAbFGVXQ_JOpn2Zyln8E").build()
+
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(CallbackQueryHandler(button_handler))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+
+    print("Bot is running...")
+    await app.run_polling()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+

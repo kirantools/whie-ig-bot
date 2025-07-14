@@ -80,4 +80,4 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await query.edit_message_text("❌ Sorry, out of stock for this IG pack.")
 
 # Handle UTR message
-async def handle_message(update: Update, context: ContextTyp_
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):

@@ -81,3 +81,12 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Handle UTR message
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if context.user_data.get("awaiting_utr"):
+        utr = update.message.text.strip()
+        save_utr_request(update.effective_user.username or update.effective_user.id, utr)
+        await update.message.reply_text("✅ UTR submitted. Please wait for admin verification.")
+        await context.bot.send_message(
+            chat_id=ADMIN_ID,
+            text=f"📥 New UTR from @{update.effective_user.username or update.effective_user.id}:\n{utr}"
+        )
+        context.user_data["awaiting_utr"] = False
